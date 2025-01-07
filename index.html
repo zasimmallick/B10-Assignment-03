@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>B10-Assignment-03</title>
    <!-- Google font CDN link-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,39 +18,89 @@
    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <style>
-    .font-Manrope{
-      font-family: "Manrope", serif;
-    }
-    
-   </style>
 
 <!-- Tailwind CSS Configuration -->
 <script>
+  // Tailwind configuration with custom colors
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          clifford: '#da373d',
-        }
-      }
-    }
-  }
+          primary: '#00A651',
+          secondary: '#F5F5F5',
+          neutral: '#292929',
+          highlight: '#ABEF5F',
+          iconBG: '#FFFFFF',
+          textColor:"#737373",
+
+        },
+        fontFamily: {
+          manrope: ['Manrope', 'sans-serif'],
+        },
+      },
+    },
+  };
 </script>
    
 </head>
 <body class="font-Manrope">
-  <header>
-    <!-- Navbar Section Start -->
-    <nav>
-      
-    </nav>
-    <!-- Navbar Section End -->
+  <header class="md:container mx-auto">
+   <!-- Navbar Section Start -->
+<div class="container mx-auto px-4 lg:px-8 py-2 flex justify-between items-center">
+  <!-- Logo Section -->
+  <a href="#" class="flex items-center text-black font-bold text-xl">
+   <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 text-primary"></i> 
+    Rinterio
+  </a>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="dropdown dropdown-end lg:hidden">
+    <!-- Hamburger Icon -->
+    <label tabindex="0" class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <!-- Dropdown Menu Items -->
+    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+      <li><a href="#" class="hover:text-primary font-semibold">Home</a></li>
+      <li><a href="#" class="hover:text-primary font-textColor">Services</a></li>
+      <li><a href="#" class="hover:text-primary font-textColor">Portfolio</a></li>
+      <li><a href="#" class="hover:text-primary font-textColor">Blogs</a></li>
+      <li><a href="#" class="hover:text-primary font-textColor">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Desktop Navigation Links -->
+  <nav class="hidden lg:flex items-center space-x-8">
+    <a href="#" class="hover:text-primary font-semibold">Home</a>
+    <a href="#" class="hover:text-primary font-textColor">Services</a>
+    <a href="#" class="hover:text-primary font-textColor">Portfolio</a>
+    <a href="#" class="hover:text-primary font-textColor">Blogs</a>
+    <a href="#" class="hover:text-primary font-textColor">Contact Us</a>
+  </nav>
+
+  <!-- Action Icons and Buttons -->
+  <div class="hidden lg:flex items-center space-x-4">
+    <!-- Search Button -->
+    <button class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <!-- Cart Button -->
+    <button class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+
+    <!-- Book Consult Button -->
+    <a href="#contact" class="btn bg-highlight text-neutral hover:bg-primary flex items-center gap-2 font-semibold rounded-full">
+      Book Consult
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+  </div>
+</div>
+<!-- Navbar Section End -->
 
      <!-- Banner section start -->
-          <section>
-
-          </section>
+    
       <!-- Banner section End -->
   </header>
 
