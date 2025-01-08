@@ -26,12 +26,12 @@
     theme: {
       extend: {
         colors: {
-          primary: '#00A651',
-          secondary: '#F5F5F5',
+          buttonColor: '#ABEF5F',
+          secondButton: '#ABEF5F80',
           neutral: '#292929',
-          highlight: '#ABEF5F',
-          iconBG: '#FFFFFF',
+          thirdButton: '#FFFFFF',
           textColor:"#737373",
+          footerColor:"#1C1C1C",
               
         },
         fontFamily: {
@@ -49,64 +49,66 @@
 <body class="font-Manrope">
   <header class="md:container mx-auto">
    <!-- Navbar Section Start -->
-<div class="container mx-auto px-4 lg:px-8 py-2 flex justify-between items-center">
-  <!-- Logo Section -->
-  <a href="#" class="flex items-center text-black font-bold text-3xl">
-   <i class="fa-solid fa-arrow-up-right-from-square text-3xl mr-2 text-primary"></i> 
-    Rinterio
-  </a>
-
-  <!-- Mobile Dropdown Menu -->
-  <div class="dropdown dropdown-end lg:hidden">
-    <!-- Hamburger Icon -->
-    <label tabindex="0" class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-    <!-- Dropdown Menu Items -->
-    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-      <li><a href="#" class="hover:text-primary font-semibold">Home</a></li>
-      <li><a href="#" class="hover:text-primary font-textColor">Services</a></li>
-      <li><a href="#" class="hover:text-primary font-textColor">Portfolio</a></li>
-      <li><a href="#" class="hover:text-primary font-textColor">Blogs</a></li>
-      <li><a href="#" class="hover:text-primary font-textColor">Contact Us</a></li>
-    </ul>
-  </div>
-
-  <!-- Desktop Navigation Links -->
-  <nav class="hidden lg:flex items-center space-x-8">
-    <a href="#" class="hover:text-primary font-semibold">Home</a>
-    <a href="#" class="hover:text-primary font-textColor">Services</a>
-    <a href="#" class="hover:text-primary font-textColor">Portfolio</a>
-    <a href="#" class="hover:text-primary font-textColor">Blogs</a>
-    <a href="#" class="hover:text-primary font-textColor">Contact Us</a>
-  </nav>
-
-  <!-- Action Icons and Buttons -->
-  <div class="hidden lg:flex items-center space-x-4">
-    <!-- Search Button -->
-    <button class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-
-    <!-- Cart Button -->
-    <button class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </button>
-
-    <!-- Book Consult Button -->
-    <a href="#contact" class="btn bg-highlight text-neutral hover:bg-primary flex items-center gap-2 font-semibold rounded-full">
-      Book Consult
-      <i class="fa-solid fa-arrow-up-right-from-square"></i>
-    </a>
-  </div>
-</div>
+    <section class="lg:px-16 lg:pt-4">
+      <div class="container mx-auto px-4 lg:px-8 py-2 flex justify-between items-center">
+        <!-- Logo Section -->
+        <a href="#" class="flex items-center text-black font-bold text-3xl">
+         <i class="fa-solid fa-arrow-up-right-from-square text-3xl mr-2 text-buttonColor"></i> 
+          Rinterio
+        </a>
+      
+        <!-- Mobile Dropdown Menu -->
+        <div class="dropdown dropdown-end lg:hidden">
+          <!-- Hamburger Icon -->
+          <label tabindex="0" class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <!-- Dropdown Menu Items -->
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="#" class="hover:text-primary font-semibold">Home</a></li>
+            <li><a href="#" class="hover:text-primary font-textColor">Services</a></li>
+            <li><a href="#" class="hover:text-primary font-textColor">Portfolio</a></li>
+            <li><a href="#" class="hover:text-primary font-textColor">Blogs</a></li>
+            <li><a href="#" class="hover:text-primary font-textColor">Contact Us</a></li>
+          </ul>
+        </div>
+      
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="#" class="hover:text-primary font-semibold">Home</a>
+          <a href="#" class="hover:text-primary font-textColor">Services</a>
+          <a href="#" class="hover:text-primary font-textColor">Portfolio</a>
+          <a href="#" class="hover:text-primary font-textColor">Blogs</a>
+          <a href="#" class="hover:text-primary font-textColor">Contact Us</a>
+        </nav>
+      
+        <!-- Action Icons and Buttons -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <!-- Search Button -->
+          <button class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+      
+          <!-- Cart Button -->
+          <button class="btn btn-circle bg-iconBG text-textColor hover:bg-primary">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+      
+          <!-- Book Consult Button -->
+          <a href="#contact" class="btn bg-buttonColor  text-neutral  flex items-center gap-2 font-semibold rounded-full">
+            Book Consult
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 <!-- Navbar Section End -->
 
      <!-- Banner section start -->
      <section class="flex flex-col items-center justify-center px-6 py-12 bg-gray-50">
       <!-- Image Section -->
       <div class="max-w-lg">
-        <img src="assets/banner.png" alt="Barn House" class="rounded-lg shadow-lg w-full object-cover" />
+        <img src="assets/banner.png" alt="Barn House" class="rounded-lg w-full object-cover" />
       </div>
     
       <!-- Title -->
@@ -123,9 +125,9 @@
       <!-- Button -->
       <div class="mt-6">
         <a href="#"
-          class="flex items-center px-8 py-3 text-lg font-medium text-black bg-green-500 rounded-full shadow hover:bg-green-600">
+          class="flex items-center px-8 py-3 text-lg font-medium text-black bg-secondButton rounded-full shadow ">
           View Details
-          <i class="fa-solid fa-arrow-up-right-from-square text-lg ml-2 text-black"></i>
+          <i class="fa-solid fa-arrow-up-right-from-square text-lg ml-2 text-buttonColor"></i>
         </a>
       </div>
     </section>
@@ -135,8 +137,8 @@
   <!-- main section start -->
    <main>
       <!-- About Us Section Start -->
-      <section class="bg-slate-300">
-        <div class="bg-base-100 py-20">
+      <section class="bg-gray-100 ">
+        <div class="bg-gray-100  py-20 lg:px-24">
           <div class="container mx-auto px-4 lg:px-20">
             <div class="flex flex-col lg:flex-row gap-10">
       
@@ -144,7 +146,7 @@
               <div class="lg:w-1/2 py-9">
                 <div class="mb-6 text-center lg:text-left lg:AboutUs">
                   <img src="assets/Vector.png" alt="" class="hidden lg:block">
-                  <button class="btn text-xs text-black bg-white py-2 px-4 rounded-full flex items-center gap-2 hover:bg-gray-100 mx-auto lg:mx-0">
+                  <button class="btn text-xs text-black bg-thirdButton py-2 px-4 rounded-full flex items-center gap-2 hover:bg-gray-100 mx-auto lg:mx-0">
                     <i class="fas fa-arrow-right"></i>
                     <span>About Us</span>
                   </button>
@@ -198,8 +200,8 @@
       <!-- About Us Section End -->
 
       <!-- Stat Section Start -->
-      <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
+      <section class=" py-12">
+        <div class="container mx-auto px-4 lg:px-32">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
       
             <div class="text-center">
@@ -231,11 +233,11 @@
       <!-- Stat Section end -->
 
       <!-- How We Works Section Start -->
-      <section class="bg-gray-100 py-10">
-        
-        <div class="text-center mb-8 px-4">
+      <section class="bg-gray-100 py-10 lg:px-24 ">
+    
+        <div class="text-center mb-8 px-4 ">
           <div class="flex justify-center mb-4">
-            <button class="btn text-xs text-black bg-white py-2 px-8 rounded-full flex items-center gap-2 hover:bg-gray-100">
+            <button class="btn text-xs text-black bg-thirdButton py-2 px-8 rounded-full flex items-center gap-2 hover:bg-gray-100">
               <i class="fas fa-arrow-right"></i>
               <span>How We Work</span>
             </button>
@@ -245,8 +247,6 @@
             The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.
           </p>
         </div>
-      
-      
         <div class="flex flex-wrap justify-center gap-6 mt-8 px-4">
          
           <div class="card w-full sm:w-60 bg-pink-300 shadow-md hover:shadow-lg">
@@ -301,7 +301,7 @@
         <!-- Header Section -->
         <div class="text-center mb-8">
           <div class="flex justify-center mb-4">
-            <button class="btn text-xs text-black bg-white py-2 px-8 rounded-full flex items-center gap-2 hover:bg-gray-100">
+            <button class="btn text-xs text-black bg-thirdButton py-2 px-8 rounded-full flex items-center gap-2 hover:bg-gray-100">
               <i class="fas fa-arrow-right"></i>
               <span>Explore our Latest works</span>
             </button>
@@ -394,14 +394,95 @@
       
       <!-- Explore Our Latest Works Section End -->
 
+       <!-- Client Testimonials Section Start -->
+
+<section class="bg-gray-100 py-8 sm:py-12">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-24 text-center">
+    <!-- Section Header -->
+    <div class="mb-6 sm:mb-8">
+      <button class="btn bg-buttonColor py-2 px-4 sm:px-6 rounded-full flex items-center justify-center gap-2 mx-auto">
+        <i class="fas fa-comment-dots"></i>
+        <span>Testimonials</span>
+      </button>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black mt-4">
+        What Our Clients Say
+      </h2>
+      <p class="text-gray-600 mt-2 sm:mt-4 max-w-lg sm:max-w-2xl mx-auto">
+        Discover how we’ve made an impact by designing thoughtful, liveable spaces for our clients.
+      </p>
+    </div>
+
+    <!-- Testimonial Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      
+      <div class="card bg-white shadow-lg p-6 rounded-lg">
+        <div class="flex items-center mb-4">
+          <img
+            src="assets/john.jpg"
+            alt="Client Image"
+            class="w-12 sm:w-16 h-12 sm:h-16 rounded-full mr-3 sm:mr-4"
+          />
+          <div class="text-left">
+            <h3 class="font-semibold text-base sm:text-lg text-neutral">John Wick</h3>
+            <p class="text-sm sm:text-base text-gray-500">Assassins</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm sm:text-base">
+          "Working with this team was an absolute delight. Their attention to detail and commitment to excellence is unmatched."
+        </p>
+      </div>
+
+      
+      <div class="card bg-white shadow-lg p-6 rounded-lg">
+        <div class="flex items-center mb-4">
+          <img
+            src="assets/Bruce.jpg"
+            alt="Client Image"
+            class="w-12 sm:w-16 h-12 sm:h-16 rounded-full mr-3 sm:mr-4"
+          />
+          <div class="text-left">
+            <h3 class="font-semibold text-base sm:text-lg text-neutral">Bruce Wayne</h3>
+            <p class="text-sm sm:text-base text-gray-500">Wayne Enterprises</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm sm:text-base">
+          "Their ability to blend modern design with functionality exceeded all our expectations. Highly recommended!"
+        </p>
+      </div>
+
+      
+      <div class="card bg-white shadow-lg p-6 rounded-lg">
+        <div class="flex items-center mb-4">
+          <img
+            src="assets/tony.jpg"
+            alt="Client Image"
+            class="w-12 sm:w-16 h-12 sm:h-16 rounded-full mr-3 sm:mr-4"
+          />
+          <div class="text-left">
+            <h3 class="font-semibold text-base sm:text-lg text-neutral">Tony Stark</h3>
+            <p class="text-sm sm:text-base text-gray-500">Stark Industries</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm sm:text-base">
+          "A perfect balance of creativity and professionalism. They transformed our ideas into reality beautifully."
+        </p>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+<!-- Client Testimonials Section End -->
+
+
  <!-- Les's Connect Section Start -->
 
  <section
   class="bg-lets-connect bg-cover bg-center bg-no-repeat py-12 px-4 md:py-24 md:px-8">
-  <div class="container mx-auto text-center lg:px-24">
+  <div class="container mx-auto text-center lg:px-36">
     <!-- Section Header -->
     <div class="flex justify-center mb-6">
-      <button class="btn text-xs text-black bg-white py-2 px-4 md:px-6 rounded-full flex items-center gap-2 hover:bg-gray-100">
+      <button class="btn text-xs text-black bg-thirdButton py-2 px-4 md:px-6 rounded-full flex items-center gap-2 hover:bg-gray-100">
         <i class="fas fa-arrow-right"></i>
         <span>Let’s Connect</span>
       </button>
@@ -453,7 +534,7 @@
       <div class="text-center">
         <a
           href="#"
-          class="flex items-center justify-center px-8 py-3 text-lg font-medium text-black bg-green-500 rounded-full shadow hover:bg-green-600"
+          class="flex items-center justify-center px-8 py-3 text-lg font-medium text-black bg-buttonColor rounded-full shadow hover:bg-green-600"
         >
           Send Mail
           <i class="fa-solid fa-arrow-up-right-from-square text-lg ml-2 text-black"></i>
@@ -470,12 +551,12 @@
 
     <!-- Footer Section Start-->
      <!-- Footer Section -->
-     <footer class="bg-black text-white py-12 px-6 md:px-24">
+     <footer class="bg-footerColor text-white py-12 px-6 md:px-24">
       <div class="container mx-auto text-center">
         <!-- Logo Section -->
         <div class="mb-6">
-          <a href="#" class="flex justify-center items-center text-white font-bold text-3xl gap-2 hover:text-primary">
-            <i class="fa-solid fa-arrow-up-right-from-square text-primary text-3xl"></i>
+          <a href="#" class="flex justify-center items-center text-white font-bold text-3xl gap-2 ">
+            <i class="fa-solid fa-arrow-up-right-from-square text-buttonColor text-3xl"></i>
             Rinterio
           </a>
           <p class="text-gray-400 mt-2 pt-8">
@@ -486,17 +567,17 @@
     
         <!-- Navigation Links -->
         <div class="flex flex-col md:flex-row justify-center md:space-x-6 space-y-4 md:space-y-0 mb-6 lg:space-x-32 pt-8">
-          <a href="#" class="text-gray-400 hover:text-primary">Home</a>
-          <a href="#" class="text-gray-400 hover:text-primary">Services</a>
-          <a href="#" class="text-gray-400 hover:text-primary">Portfolio</a>
-          <a href="#" class="text-gray-400 hover:text-primary">Blogs</a>
-          <a href="#" class="text-gray-400 hover:text-primary">Contact</a>
+          <a href="#" class="text-gray-200 hover:text-primary">Home</a>
+          <a href="#" class="text-gray-200 hover:text-primary">Services</a>
+          <a href="#" class="text-gray-200 hover:text-primary">Portfolio</a>
+          <a href="#" class="text-gray-200 hover:text-primary">Blogs</a>
+          <a href="#" class="text-gray-200 hover:text-primary">Contact</a>
         </div>
       </div>
     
       <!-- Button Section -->
       <div class="flex justify-center mb-6 pt-8">
-        <button class="btn text-xs text-black bg-green-500 py-2 px-4 md:px-6 rounded-full flex items-center gap-2 hover:bg-gray-100">
+        <button class="btn text-xs text-black bg-buttonColor py-2 px-4 md:px-6 rounded-full flex items-center gap-2 ">
           <span>Book Consult</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-lg ml-2 text-black"></i>
         </button>
